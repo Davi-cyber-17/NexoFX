@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>NEXO FX — USD / BRL / EUR</title>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark")}catch(e){document.documentElement.dataset.theme="dark"}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></symbol><symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></symbol><symbol id="i-compare" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4L3 8l4 4M3 8h14M17 20l4-4-4-4M21 16H7"/></symbol><symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></symbol><symbol id="i-tools" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h8m4 0h4M4 12h2m4 0h10M4 18h10m4 0h2"/><circle cx="14" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="18" r="2"/></symbol><symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0112 0c0 7 3 8 3 8H3s3-1 3-8M10 21a2 2 0 004 0"/></symbol><symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol><symbol id="i-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></symbol><symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/></symbol><symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14A8 8 0 0110 4a8 8 0 1010 10z"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 00-14-4L4 9M4 4v5h5M4 13a8 8 0 0014 4l2-2M20 20v-5h-5"/></symbol><symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol><symbol id="i-range" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/></symbol><symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol><symbol id="i-avg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18" stroke-dasharray="2 3"/></symbol><symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2zM12 10v5M12 18h.01"/></symbol><symbol id="i-news" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13v16H6a2 2 0 01-2-2zM17 8h3v10a2 2 0 01-2 2M8 8h5M8 12h5M8 16h3"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol><symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 13h6M9 17h6"/></symbol><symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol></svg>
+<div class="splash" id="splash" role="status" aria-label="Carregando"><div class="splash-in"><div class="brand-icon"><svg class="i big" aria-hidden="true"><use href="#i-pulse"/></svg></div><strong>NEXO <span>FX</span></strong><div class="splash-bar"><i></i></div><small>Carregando cotações...</small></div></div>
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon"><svg class="i" aria-hidden="true"><use href="#i-pulse"/></svg></div>
+            <div>
+                <strong>NEXO <span>FX</span></strong>
+                <small>MARKET ANALYTICS</small>
+            </div>
+        </div>
+
+        <nav class="side-nav" aria-label="Páginas">
+            <p class="nav-label">Painel</p>
+            <a class="active" href="#visao"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg> <span>Visão geral</span></a>
+            <a href="#mercados"><svg class="i" aria-hidden="true"><use href="#i-globe"/></svg> <span>Mercados</span></a>
+            <a href="#analises"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg> <span>Análises</span></a>
+            <p class="nav-label">Ferramentas</p>
+            <a href="#conversor"><svg class="i" aria-hidden="true"><use href="#i-calc"/></svg> <span>Conversor</span></a>
+            <a href="#relatorios"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg> <span>Relatórios</span></a>
+            <p class="nav-label">Informação</p>
+            <a href="#noticias"><svg class="i" aria-hidden="true"><use href="#i-news"/></svg> <span>Notícias</span></a>
+            <a href="#calendario"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg> <span>Calendário</span></a>
+            <p class="nav-label">Sistema</p>
+            <a href="#config"><svg class="i" aria-hidden="true"><use href="#i-settings"/></svg> <span>Configurações</span></a>
+        </nav>
+
+        <div class="side-source">
+            <span class="online-dot" id="sourceDot"></span>
+            <div>
+                <b id="sourceText">Conectando...</b>
+                <small id="everyText">Atualiza a cada 5 min</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main" id="topo">
+<header class="topbar">
+
+            <button class="icon-btn" id="theme" aria-label="Alternar tema claro/escuro" title="Alternar tema"><svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg></button>
+            <button class="refresh" id="refresh"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg><span id="refreshLabel">Atualizar</span></button>
+        </header>
+<div class="view" id="v-visao" hidden>
+<section class="hero" id="resumo">
+            <div>
+                <div class="eyebrow">PAINEL DE CÂMBIO</div>
+                <h1>USD em relação ao Real e ao Euro</h1>
+                <p>Acompanhe as cotações, compare as moedas e visualize a evolução histórica.</p>
+            </div>
+
+            <div class="last-update">
+                <span class="online-dot"></span>
+                Última atualização:
+                <b id="lastUpdate">carregando...</b>
+            </div>
+        </section><section class="metrics">
+
+            <article class="metric card">
+                <div class="metric-title">
+                    <span>USD / BRL</span>
+                    <span>🇺🇸 → 🇧🇷</span>
+                </div>
+                <strong id="usdBrl">—</strong>
+                <span class="change" id="usdBrlChange">—</span>
+                <small>1 dólar americano em reais</small>
+                <em class="stamp"></em>
+            </article>
+
+            <article class="metric card">
+                <div class="metric-title">
+                    <span>USD / EUR</span>
+                    <span>🇺🇸 → 🇪🇺</span>
+                </div>
+                <strong id="usdEur">—</strong>
+                <span class="change" id="usdEurChange">—</span>
+                <small>1 dólar americano em euros</small>
+                <em class="stamp"></em>
+            </article>
+
+            <article class="metric card">
+                <div class="metric-title">
+                    <span>EUR / BRL</span>
+                    <span>🇪🇺 → 🇧🇷</span>
+                </div>
+                <strong id="eurBrl">—</strong>
+                <span class="change" id="eurBrlChange">—</span>
+                <small>1 euro em reais</small>
+                <em class="stamp"></em>
+            </article>
+
+            <article class="metric card">
+                <div class="metric-title">
+                    <span>Variação do período</span>
+                    <span>◒</span>
+                </div>
+                <strong id="periodChange">—</strong>
+                <span class="change" id="periodStatus">USD / BRL</span>
+                <small id="periodLabel">últimos 30 dias</small>
+            </article>
+
+        </section><section class="bottom-grid"><article class="card comparison" id="comparacao">
+                <div class="card-header">
+                    <div>
+                        <h2>Comparação das moedas</h2>
+                        <p>Relação entre as principais cotações</p>
+                    </div>
+                </div>
+
+                <div class="compare-row">
+                    <div>
+                        <span>USD / BRL</span>
+                        <b id="compareBrl">—</b>
+                    </div>
+                    <div class="bar"><i id="barBrl"></i></div>
+                    <small id="compareBrlChange">—</small>
+                </div>
+
+                <div class="compare-row">
+                    <div>
+                        <span>USD / EUR</span>
+                        <b id="compareEur">—</b>
+                    </div>
+                    <div class="bar purple-bar"><i id="barEur"></i></div>
+                    <small id="compareEurChange">—</small>
+                </div>
+
+                <div class="compare-row">
+                    <div>
+                        <span>EUR / BRL</span>
+                        <b id="compareEuroBrl">—</b>
+                    </div>
+                    <div class="bar green-bar"><i id="barEuroBrl"></i></div>
+                    <small id="compareEuroBrlChange">—</small>
+                </div>
+            </article><article class="card alerts" id="alertas">
+                <div class="card-header"><div><h2>Alertas de cotação</h2><p>Salvos neste navegador; checados a cada atualização</p></div></div>
+                <form id="alertForm" class="alert-form">
+                    <select id="alertPair" aria-label="Par"><option value="usdBrl">USD / BRL</option><option value="usdEur">USD / EUR</option><option value="eurBrl">EUR / BRL</option></select>
+                    <select id="alertDir" aria-label="Condição"><option value="above">Subir até</option><option value="below">Cair até</option></select>
+                    <input id="alertValue" inputmode="decimal" placeholder="5,50" aria-label="Valor alvo">
+                    <button class="refresh" type="submit">Criar alerta</button>
+                </form>
+                <ul id="alertList" class="alert-list"></ul>
+            </article></section>
+</div>
+<div class="view" id="v-mercados" hidden>
+<section class="hero"><div><div class="eyebrow">NEXO FX</div><h1>Mercados</h1><p>Moedas em reais, cruzamentos entre pares e comparações.</p></div></section><section class="main-grid single"><article class="card" id="mercado">
+                <div class="card-header"><div><h2>Outras moedas em reais</h2><p>Quanto vale 1 unidade de cada moeda</p></div></div>
+                <div class="others" id="others"></div>
+            </article></section><section class="main-grid single"><article class="card tool" id="matriz"><div class="card-header"><div><h2>Matriz de câmbio</h2><p>Quanto vale 1 unidade da moeda da linha em cada moeda da coluna</p></div></div><div class="table-wrap"><table id="matrix"></table></div></article></section>
+</div>
+<div class="view" id="v-analises" hidden>
+<section class="hero"><div><div class="eyebrow">NEXO FX</div><h1>Análises</h1><p>Gráficos históricos, estatísticas e indicadores técnicos.</p></div></section><section class="main-grid">
+
+            <article class="card chart-card" id="historico">
+                <div class="card-header">
+                    <div>
+                        <h2>Evolução da cotação</h2>
+                        <p>Histórico de referência (dias úteis)</p>
+                    </div>
+
+                    <div class="periods">
+                        <button data-days="7">7D</button>
+                        <button class="active" data-days="30">30D</button>
+                        <button data-days="90">90D</button>
+                        <button data-days="180">6M</button>
+                        <button data-days="365">1A</button>
+                    </div>
+                </div>
+                <div class="chart-tools">
+                    <select id="pair" aria-label="Par de moedas">
+                        <option value="usdBrl">USD / BRL</option>
+                        <option value="usdEur">USD / EUR</option>
+                        <option value="eurBrl">EUR / BRL</option>
+                    </select>
+                    <label class="check"><input type="checkbox" id="ma"> Média móvel (7 pontos)</label>
+                    <button class="ghost" id="png">Baixar gráfico (PNG)</button>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="chart"></canvas>
+                    <div class="loading" id="loading">Carregando dados...</div>
+                </div>
+            </article>
+
+            <article class="card analysis-card">
+                <div class="card-header">
+                    <div>
+                        <h2>Análise automática</h2>
+                        <p>Resumo estatístico do período</p>
+                    </div>
+                    <span class="ai">AI</span>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-icon blue"><svg class="i" aria-hidden="true"><use href="#i-trend"/></svg></div>
+                    <div>
+                        <b id="trendTitle">Tendência</b>
+                        <p id="trendText">Aguardando dados...</p>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-icon purple"><svg class="i" aria-hidden="true"><use href="#i-range"/></svg></div>
+                    <div>
+                        <b>Faixa do período</b>
+                        <p id="rangeText">—</p>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-icon green"><svg class="i" aria-hidden="true"><use href="#i-pulse"/></svg></div>
+                    <div>
+                        <b>Volatilidade</b>
+                        <p id="volatilityText">—</p>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-icon blue"><svg class="i" aria-hidden="true"><use href="#i-avg"/></svg></div>
+                    <div>
+                        <b>Média do período</b>
+                        <p id="avgText">—</p>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    Os dados e análises são informativos e não constituem recomendação financeira.
+                </div>
+            </article>
+
+        </section><section class="main-grid single"><article class="card tool" id="indicadores"><div class="card-header"><div><h2>Indicadores técnicos</h2><p>Calculados sobre o par e o período selecionados no gráfico</p></div></div><div class="ind" id="ind"></div><p class="hint">Indicadores são ferramentas estatísticas, não recomendação de compra ou venda.</p></article></section><section class="main-grid single" id="dados">
+            <article class="card table-card">
+                <div class="card-header">
+                    <div><h2>Dados do período</h2><p>Cotações diárias e variação do USD/BRL</p></div>
+                    <button class="ghost" id="csv">Exportar CSV</button>
+                </div>
+                <div class="table-wrap">
+                    <table><thead><tr><th>Data</th><th>USD/BRL</th><th>USD/EUR</th><th>EUR/BRL</th><th>Var. dia</th></tr></thead><tbody id="tbody"><tr><td colspan="5" class="emptyrow">Sem dados carregados ainda.</td></tr></tbody></table>
+                </div>
+            </article>
+        </section>
+</div>
+<div class="view" id="v-conversor" hidden>
+<section class="hero"><div><div class="eyebrow">NEXO FX</div><h1>Conversor</h1><p>Conversão entre 10 moedas, simulador de compra e cotação por data.</p></div></section><section class="bottom-grid"><article class="card converter" id="conversor">
+                <div class="card-header">
+                    <div>
+                        <h2>Conversor rápido</h2>
+                        <p>Conversão baseada nas cotações atuais</p>
+                    </div>
+                </div>
+
+                <div class="converter-grid">
+                    <label>
+                        Valor
+                        <input id="amount" type="number" value="100" min="0" step="0.01">
+                    </label>
+
+                    <label>
+                        De
+                        <select id="from"></select>
+                    </label>
+
+                    <button class="swap" id="swap">⇄</button>
+
+                    <label>
+                        Para
+                        <select id="to"></select>
+                    </label>
+                </div>
+
+                <div class="conversion-result">
+                    <small>Resultado · <span id="rateLine">—</span></small>
+                    <strong id="result">—</strong>
+                    <button class="ghost" id="copy">Copiar resultado</button>
+                    <button class="ghost" id="saveConv">Salvar conversão</button>
+                </div>
+                <ul class="alert-list" id="convList"></ul>
+            </article><article class="card tool" id="multi-card"><div class="card-header"><div><h2>Conversão para todas as moedas</h2><p>Usa o valor e a moeda de origem do conversor ao lado</p></div></div><div class="table-wrap"><table><tbody id="multi"></tbody></table></div></article></section><section class="bottom-grid"><article class="card tool">
+                <div class="card-header"><div><h2>Simulador de compra internacional</h2><p>Quanto custa em reais, com IOF e taxa do banco</p></div></div>
+                <div class="converter-grid sim-grid">
+                    <label>Valor<input id="simValue" type="number" value="100" min="0" step="0.01"></label>
+                    <label>Moeda<select id="simCur"></select></label>
+                    <label>IOF (%)<input id="simIof" type="number" value="3.5" min="0" step="0.1"></label>
+                    <label>Taxa do banco (%)<input id="simFee" type="number" value="0" min="0" step="0.1"></label>
+                </div>
+                <div class="conversion-result"><small id="simInfo">—</small><strong id="simTotal">—</strong></div>
+                <p class="hint">A alíquota do IOF varia conforme a forma de pagamento e muda por decreto: confira a vigente com seu banco.</p>
+            </article><article class="card tool">
+                <div class="card-header"><div><h2>Cotação em uma data</h2><p>Consulte um dia passado e compare com hoje</p></div></div>
+                <div class="date-row"><input type="date" id="dateIn" aria-label="Data"><button class="refresh" id="dateGo">Consultar</button></div>
+                <div class="conversion-result" id="dateOut"><small>Escolha uma data a partir de 1999.</small></div>
+            </article></section>
+</div>
+<div class="view" id="v-noticias" hidden>
+<section class="hero"><div><div class="eyebrow">NEXO FX</div><h1>Notícias</h1><p>Notícias econômicas e acontecimentos que movem o câmbio.</p></div></section><section class="main-grid"><article class="card tool" id="news"><div class="card-header"><div><h2>Manchetes de economia</h2><p>Títulos e links das fontes — a leitura completa abre no site original</p></div><div class="seg" id="newsTabs"><button data-f="ab" class="active">Agência Brasil</button><button data-f="g1">g1 Economia</button></div></div><div id="newsList" class="news"></div></article><article class="card tool" id="fontes"><div class="card-header"><div><h2>Fontes oficiais</h2><p>Informação primária sobre juros, inflação e câmbio</p></div></div><ul class="alert-list links"><li><a href="https://www.bcb.gov.br/" target="_blank" rel="noopener">Banco Central do Brasil</a></li><li><a href="https://www.ecb.europa.eu/" target="_blank" rel="noopener">Banco Central Europeu</a></li><li><a href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Federal Reserve (EUA)</a></li><li><a href="https://www.imf.org/" target="_blank" rel="noopener">Fundo Monetário Internacional</a></li></ul></article></section>
+</div>
+<div class="view" id="v-calendario" hidden>
+<section class="hero"><div><div class="eyebrow">NEXO FX</div><h1>Calendário econômico</h1><p>Agenda de eventos que movimentam os mercados.</p></div></section><section class="main-grid"><article class="card tool" id="calendario"><div class="card-header"><div><h2>Calendário</h2><p>Clique em um dia para escolher a data do evento</p></div></div><div class="cal-nav"><button class="ghost" id="calPrev" aria-label="Mês anterior">‹</button><b id="calTitle"></b><button class="ghost" id="calNext" aria-label="Próximo mês">›</button></div><div class="cal" id="calGrid"></div></article><article class="card tool" id="eventos"><div class="card-header"><div><h2>Agenda de eventos</h2><p>Eventos que você cadastra ficam salvos neste navegador</p></div></div><form id="evForm" class="ev-form"><input type="date" id="evDate" required aria-label="Data"><input id="evTitle" placeholder="Ex.: Decisão de juros (Copom)" required aria-label="Título"><select id="evType" aria-label="Tipo"><option>Juros</option><option>Inflação</option><option>Emprego</option><option>Outro</option></select><select id="evImpact" aria-label="Impacto"><option value="alto">Impacto alto</option><option value="medio" selected>Impacto médio</option><option value="baixo">Impacto baixo</option></select><button class="refresh" type="submit">Adicionar</button></form><ul class="alert-list" id="evList"></ul><p class="hint">As datas de Copom, FOMC e divulgações mudam a cada ano: consulte o calendário oficial no site do Banco Central e do Federal Reserve e cadastre aqui os que importam para você.</p></article></section>
+</div>
+<div class="view" id="v-relatorios" hidden>
+<section class="hero"><div><div class="eyebrow">NEXO FX</div><h1>Relatórios</h1><p>Relatórios estatísticos e exportação de dados.</p></div></section><section class="main-grid single"><article class="card tool" id="relatorio"><div class="card-header"><div><h2>Gerar relatório</h2><p>Escolha o período e exporte os dados</p></div></div><div class="rep-tools"><label class="check">Período <select id="repDays"><option value="7">7 dias</option><option value="30" selected>30 dias</option><option value="90">90 dias</option><option value="180">6 meses</option><option value="365">1 ano</option></select></label><button class="refresh" id="repGo">Gerar relatório</button></div><div id="repOut" class="rep-out"><div class="state"><b>Nenhum relatório gerado</b><span>Escolha um período e clique em "Gerar relatório".</span></div></div><div class="rep-tools" id="repBtns" hidden><button class="ghost" id="repPrint">Imprimir / salvar PDF</button><button class="ghost" id="repCsv">CSV</button><button class="ghost" id="repJson">JSON</button><button class="ghost" id="repCopy">Copiar resumo</button></div></article></section>
+</div>
+<div class="view" id="v-config" hidden>
+<section class="hero"><div><div class="eyebrow">NEXO FX</div><h1>Configurações</h1><p>Personalize a experiência do NEXO FX.</p></div></section><section class="main-grid single"><article class="card tool" id="prefs"><div class="card-header"><div><h2>Preferências</h2><p>Salvas automaticamente neste navegador</p></div></div><div class="converter-grid sim-grid prefs"><label>Tema<select id="sTheme"><option value="auto">Automático (sistema)</option><option value="dark">Escuro</option><option value="light">Claro</option></select></label><label>Período padrão do gráfico<select id="sDays"><option value="7">7 dias</option><option value="30">30 dias</option><option value="90">90 dias</option><option value="180">6 meses</option><option value="365">1 ano</option></select></label><label>Par padrão<select id="sPair"><option value="usdBrl">USD / BRL</option><option value="usdEur">USD / EUR</option><option value="eurBrl">EUR / BRL</option></select></label><label>Atualização automática<select id="sEvery"><option value="0">Desativada</option><option value="1">A cada 1 min</option><option value="5">A cada 5 min</option><option value="15">A cada 15 min</option></select></label><label>Casas decimais<select id="sDec"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label><label>Média móvel no gráfico<select id="sMa"><option value="0">Oculta</option><option value="1">Visível</option></select></label></div></article></section><section class="main-grid single"><article class="card tool" id="dados-locais"><div class="card-header"><div><h2>Seus dados</h2><p>Alertas, conversões, eventos e preferências ficam só neste navegador</p></div></div><button class="ghost danger" id="wipe">Apagar todos os dados salvos</button></article></section>
+</div>
+<footer>
+            <div><b>Fonte</b><span>Frankfurter / dados de referência de câmbio</span></div>
+            <div><b>Moedas</b><span>USD · BRL · EUR</span></div>
+            <div><b>Modo</b><span>Consulta online · cache offline</span></div>
+        </footer>
+</main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
